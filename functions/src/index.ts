@@ -1,17 +1,11 @@
 import * as functions from "firebase-functions";
 import express from 'express';
 import Stripe from 'stripe';
-
 import { generateResponse } from './utils';
-
 const app = express();
-
-
-
 const getKeys = ()=> {
  return  { 'secret': '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', 'publish': 'pk_test_yBSEiOG7v3gQmDAbEyw0K4ue00TlejUUQH' };
 }
-
 
 app.post(
     '/create-payment-intent',
